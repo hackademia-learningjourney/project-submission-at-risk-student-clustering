@@ -1,101 +1,101 @@
-student_id,attendance,homework_completion,test_scores,participation
-1,87.45,46.69,75.37,44.28
-2,77.93,66.59,78.41,51.0
-3,89.72,68.15,86.25,83.68
-4,100.0,58.95,85.81,80.26
-5,76.49,71.77,49.33,64.48
-6,76.49,83.08,55.93,67.93
-7,100.0,100.0,77.73,96.94
-8,91.51,78.49,77.71,50.21
-9,72.96,80.15,77.73,78.68
-10,88.14,73.51,100.0,59.95
-11,73.05,36.62,78.56,59.56
-12,73.01,74.47,87.03,92.47
-13,83.63,76.2,84.31,85.64
-14,51.3,100.0,79.77,85.34
-15,54.13,71.15,65.27,97.64
-16,71.57,81.03,81.38,65.53
-17,64.81,74.31,58.41,82.05
-18,84.71,51.63,66.45,57.24
-19,66.38,97.86,62.72,73.1
-20,58.82,90.04,71.23,61.75
-21,100.0,90.82,100.0,67.42
-22,76.61,56.81,41.99,79.88
-23,81.01,100.0,80.29,44.54
-24,58.63,46.96,45.81,100.0
-25,71.83,86.74,62.92,39.85
-26,81.66,100.0,86.33,34.65
-27,62.74,55.19,70.96,93.95
-28,85.64,63.67,53.83,84.79
-29,70.99,76.99,59.27,80.6
-30,75.62,64.93,80.19,80.71
-31,70.97,43.99,59.04,64.69
-32,100.0,76.37,73.25,42.57
-33,79.8,53.75,70.68,66.9
-34,64.13,84.47,60.23,48.07
-35,92.34,56.61,100.0,89.38
-36,61.69,100.0,79.51,61.32
-37,83.13,59.33,39.62,44.36
-38,50.6,68.56,72.8,56.97
-39,60.08,91.27,60.07,75.32
-40,82.95,50.38,82.79,50.91
-41,91.08,79.55,58.11,44.44
-42,82.57,100.0,68.28,71.09
-43,78.27,42.85,77.57,71.12
-44,75.48,78.69,82.99,52.33
-45,57.82,80.2,52.0,53.22
-46,69.2,90.64,64.98,70.8
-47,73.09,50.26,62.88,28.8
-48,95.86,48.59,60.2,29.81
-49,85.15,85.44,96.48,47.04
-50,53.55,80.94,76.07,59.66
-51,84.86,80.01,51.09,72.77
-52,74.22,81.93,83.77,100.0
-53,69.85,61.4,100.0,86.44
-54,89.18,79.65,85.49,61.0
-55,95.46,80.86,47.21,64.52
-56,93.97,60.71,62.74,39.94
-57,67.41,100.0,89.0,64.54
-58,75.36,84.48,59.38,57.78
-59,84.97,51.17,76.66,73.07
-60,94.63,88.13,81.62,44.32
-61,72.81,55.51,56.1,77.98
-62,77.22,90.74,69.11,100.0
-63,63.4,98.17,21.38,62.28
-64,62.06,58.59,54.63,75.04
-65,92.19,94.27,66.21,82.25
-66,100.0,83.26,51.28,54.97
-67,78.92,91.44,94.49,70.6
-68,95.05,100.0,48.55,65.31
-69,85.42,70.09,63.4,67.44
-70,70.32,59.93,71.96,45.67
-71,85.42,57.21,91.62,65.61
-72,100.0,58.68,48.46,77.45
-73,79.46,73.46,87.45,100.0
-74,100.0,81.82,70.15,88.98
-75,40.7,80.53,55.28,100.0
-76,92.33,91.54,76.93,45.82
-77,81.31,75.26,72.99,86.81
-78,75.51,100.0,61.0,69.58
-79,81.38,69.71,71.05,100.0
-80,50.19,100.0,64.22,44.79
-81,76.7,87.51,71.7,44.01
-82,85.36,57.86,79.93,50.02
-83,100.0,53.58,93.79,11.9
-84,72.23,84.65,51.43,51.86
-85,67.87,70.53,100.0,46.02
-86,72.47,89.28,40.72,68.76
-87,93.73,84.46,67.72,73.54
-88,84.93,73.54,78.82,100.0
-89,72.05,58.06,74.21,88.76
-90,87.7,44.7,60.66,50.58
-91,81.46,66.07,66.88,42.54
-92,94.53,92.13,62.6,77.3
-93,69.47,79.28,61.16,31.99
-94,75.09,50.09,82.74,100.0
-95,74.12,78.46,75.36,94.49
-96,58.05,82.71,59.61,53.27
-97,84.44,57.32,83.49,22.17
-98,83.92,78.07,74.61,98.85
-99,80.08,76.16,82.19,62.14
-100,76.48,52.14,79.44,95.95
+Name,ID,Gender,AttendanceRate (%),StudyHoursPerWeek,PreviousGrade,ExtracurricularActivities,ParentalSupport,FinalGrade,HomeworkCompletion (%)
+Jane Thomas,S1015,Female,87.38,14.1,83,None,Low,86,90.11
+David White,S4813,Male,68.45,29.4,54,Music,Low,93,72.46
+Michael Smith,S9471,Male,75.36,17.6,66,Art,Low,55,60.92
+Jane Anderson,S1971,Male,94.68,19.7,53,Debate,Medium,82,58.28
+Alex White,S3349,Male,92.07,15.9,57,Community Service,Low,61,65.05
+Emily Thomas,S4236,Male,92.19,12.3,61,Art,Low,50,90.86
+Jessica Thomas,S1152,Female,68.12,14.4,77,Sports,Low,68,90.32
+Jane Jackson,S6173,Male,93.45,12.6,53,Community Service,Medium,99,86.16
+Alex Anderson,S9892,Male,80.75,16.5,74,Community Service,High,81,84.89
+Jane Harris,S2641,Female,72.34,5.1,97,Art,High,59,86.74
+Jane Jackson,S3059,Male,73.95,25.3,80,Debate,Medium,64,54.18
+Alex Thomas,S9145,Female,82.64,19.2,54,Community Service,Medium,71,53.22
+Daniel Thomas,S5509,Male,92.7,6.5,86,None,High,99,82.39
+Emma Johnson,S8304,Female,89.88,9.0,82,None,High,82,76.9
+Alex Brown,S6423,Female,75.82,14.1,94,Music,Medium,98,55.64
+Daniel Smith,S8802,Female,83.8,25.2,52,Sports,Medium,70,97.87
+Michael Taylor,S4642,Female,81.28,23.4,67,Art,High,72,54.92
+Daniel Harris,S4633,Male,67.77,23.3,82,Art,High,96,75.35
+Jane White,S2522,Female,77.57,26.5,75,None,Low,58,67.03
+David Thomas,S5377,Male,79.25,7.9,93,None,High,69,64.07
+John Harris,S4977,Male,75.0,11.6,76,Community Service,Low,63,95.06
+David Smith,S8862,Male,62.51,16.6,76,Sports,High,73,80.13
+David Anderson,S4731,Male,75.15,19.7,99,None,High,85,99.99
+Daniel White,S3891,Female,85.15,27.4,72,Sports,Low,78,52.23
+John Brown,S4451,Female,87.27,14.3,54,Debate,High,79,61.89
+Emily Taylor,S5470,Female,91.06,11.4,66,Debate,Low,84,84.11
+Jane Martin,S9102,Male,97.98,29.6,62,Community Service,Medium,62,78.85
+Daniel Thomas,S4316,Male,62.08,7.6,61,Art,Medium,66,87.8
+John Anderson,S8130,Male,83.54,25.4,53,Sports,Low,77,64.33
+Emily White,S1962,Male,76.28,6.1,53,Art,Low,87,77.43
+Emma White,S8219,Female,77.92,21.5,60,Music,High,66,82.39
+Jane Jackson,S3728,Male,74.36,6.2,62,Community Service,Low,53,80.26
+David Anderson,S1544,Female,92.85,10.1,56,Community Service,Medium,71,51.91
+Emily Taylor,S4552,Female,77.52,6.0,100,Music,Medium,72,67.47
+Emma Taylor,S3016,Female,79.67,23.7,51,Debate,Medium,78,59.94
+Emma Brown,S1585,Male,78.11,18.7,99,Art,Medium,56,85.8
+Daniel Taylor,S8530,Male,99.86,8.8,66,Sports,High,68,87.69
+Michael Taylor,S2704,Male,82.21,12.4,85,None,Medium,85,92.02
+Daniel Thomas,S1564,Female,82.2,12.3,55,Community Service,High,90,88.78
+Jane White,S4766,Male,77.2,9.8,86,Sports,Medium,56,79.35
+Michael White,S2985,Male,62.75,16.9,62,None,Medium,71,71.16
+David Johnson,S5592,Female,96.22,12.9,60,Sports,High,78,59.46
+David Jackson,S6369,Male,97.01,20.2,100,Debate,Medium,84,93.42
+Emily Smith,S1565,Male,85.32,19.8,75,Community Service,High,89,92.65
+Sarah Johnson,S6433,Female,62.59,26.4,58,None,Medium,92,84.47
+Alex Smith,S3936,Female,65.02,14.1,86,Art,High,60,83.22
+Emma Thomas,S7916,Female,92.62,17.8,82,Art,High,68,96.71
+Daniel Thomas,S3300,Male,91.01,22.1,71,Music,Low,80,84.39
+Emily Martin,S6104,Female,79.28,21.4,91,None,Low,64,92.22
+Emma Martin,S5483,Male,75.07,9.5,57,Debate,Low,86,72.57
+Jessica Anderson,S6736,Female,85.27,5.1,83,Music,High,59,56.64
+Alex Martin,S8956,Female,82.46,20.6,87,None,Low,88,89.52
+Daniel Jackson,S1309,Female,61.2,10.3,54,Debate,Low,79,86.74
+Michael Jackson,S3446,Female,63.61,8.9,91,Community Service,Medium,85,86.15
+Emma Thomas,S8600,Male,86.5,26.5,72,None,High,99,60.58
+Daniel Brown,S7942,Female,95.24,6.0,93,Debate,Low,72,76.72
+David Taylor,S3009,Male,77.94,23.2,82,Community Service,High,78,86.58
+Michael Brown,S1819,Male,72.31,14.7,84,None,Medium,99,95.07
+Jessica Johnson,S8063,Male,74.57,18.9,91,Music,High,90,75.14
+Sarah Brown,S4173,Male,74.98,14.8,83,None,High,93,63.11
+Sarah White,S5788,Male,67.9,26.0,54,Community Service,Low,83,96.42
+Emma Martin,S2232,Male,96.79,24.3,88,Community Service,Low,97,76.64
+Emma Anderson,S5873,Male,91.75,18.9,70,Sports,Low,53,65.49
+Sarah Harris,S5523,Male,62.73,11.0,68,Debate,High,95,51.98
+Jane Harris,S9272,Female,79.55,6.4,90,Community Service,Medium,81,75.91
+John Harris,S9932,Female,60.01,5.2,75,Debate,High,67,55.5
+Emma White,S3397,Female,92.11,19.6,75,Community Service,Low,91,94.88
+Emma Harris,S1688,Female,82.91,13.4,55,Community Service,Medium,63,68.79
+Emily Anderson,S5533,Male,65.46,8.9,94,None,Medium,95,67.37
+Emma Taylor,S7221,Female,95.78,12.4,70,Sports,Low,52,56.43
+Jessica Harris,S6402,Male,97.25,25.4,68,Community Service,High,80,79.99
+Emma Johnson,S6182,Female,85.55,6.9,55,Art,High,78,81.25
+Daniel Brown,S8388,Female,97.9,6.3,66,Community Service,High,69,94.93
+Daniel Martin,S8502,Male,63.55,6.8,70,None,Medium,95,80.67
+John Martin,S9122,Female,89.39,13.4,67,Debate,Low,61,53.61
+Jane Thomas,S3820,Female,90.39,29.1,64,Art,High,74,91.65
+Jane Anderson,S4843,Male,85.49,17.5,79,Music,Medium,99,73.64
+Emily Taylor,S4035,Male,82.19,5.4,77,Debate,High,66,58.76
+Jessica Thomas,S3569,Male,69.8,9.2,78,Debate,Low,68,59.85
+John Thomas,S6984,Male,60.93,11.7,79,Debate,Medium,51,87.88
+Michael Harris,S3981,Male,76.29,6.0,84,Debate,Low,58,94.46
+Daniel Harris,S1023,Male,82.63,18.3,95,None,High,75,53.59
+Jessica Jackson,S9790,Female,74.9,20.2,52,Music,High,82,61.67
+Jane Martin,S9667,Male,96.08,18.3,57,Sports,High,58,99.76
+Sarah Harris,S1063,Male,72.06,14.9,67,Community Service,Medium,98,53.85
+Emma Brown,S1255,Female,65.69,10.1,63,Music,Medium,57,62.49
+John Harris,S6015,Male,68.9,7.6,56,Debate,Medium,53,89.97
+Emily White,S9599,Male,70.04,20.3,76,Art,High,82,50.3
+Sarah Jackson,S9418,Female,66.53,7.9,72,Sports,Medium,79,62.4
+David Jackson,S9425,Male,65.68,26.2,63,Sports,Low,80,61.72
+Jane Thomas,S6196,Male,61.36,17.5,75,Community Service,Low,84,54.88
+Jane Anderson,S3515,Female,97.58,19.4,97,Music,High,51,85.63
+Jessica Smith,S3052,Female,94.75,14.7,57,Music,High,67,84.84
+Jessica Brown,S3521,Female,95.94,6.6,84,Music,Medium,63,68.99
+Daniel Anderson,S7026,Female,78.43,11.8,93,Music,Medium,58,71.92
+John Johnson,S9689,Male,96.79,16.0,89,Community Service,High,65,84.69
+Daniel Anderson,S3409,Male,68.14,9.2,100,Sports,High,76,52.85
+Daniel White,S3827,Male,87.82,21.0,52,Music,Low,77,87.8
+John Johnson,S9130,Female,98.11,11.2,57,Music,Low,99,83.72
+Daniel Jackson,S2166,Female,73.53,10.6,67,Community Service,Low,86,67.34
