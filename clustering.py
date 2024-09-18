@@ -20,10 +20,16 @@ def load_and_preprocess_data(file_path):
     return X_scaled, df
 
 # Step 2: Implement K-means clustering
+# This function takes in the normalized features and the number of clusters
+# and returns the cluster labels for each data point
 def perform_clustering(X_scaled, n_clusters=3):
+    # Create a KMeans object with the specified number of clusters
     kmeans = KMeans(n_clusters=n_clusters, random_state=42)
+    # Fit the model to the data and get the cluster labels
     cluster_labels = kmeans.fit_predict(X_scaled)
+    # Return the cluster labels
     return cluster_labels
+
 
 # Function to analyze clusters
 def analyze_clusters(df, cluster_labels):
