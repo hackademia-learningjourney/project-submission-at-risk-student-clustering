@@ -12,21 +12,16 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
-# Load the pre-trained clustering model
-with open('student_clustering_model.pkl', 'rb') as file:
-    kmeans_model = pickle.load(file)
+def footer():
+    st.markdown("""
+    <div class="footer">
+        <p>Copyright &copy; 2024 Jayadev & Arbin & Ujwol, Hackademia</p>
+    </div>
+    """, unsafe_allow_html=True)
 
-# Function to generate random dataset (similar to the one we saved earlier)
-def generate_random_dataset():
-    data = {
-        'Name': ['John Doe', 'Jane Smith', 'Alex Johnson', 'Emily Davis', 'Michael Brown'],
-        'AttendanceRate (%)': [85, 90, 78, 92, 70],
-        'StudyHoursPerWeek': [15, 20, 10, 22, 18],
-        'PreviousGrade': [75, 85, 65, 88, 70],
-        'FinalGrade': [80, 88, 72, 90, 75],
-        'HomeworkCompletion (%)': [85, 92, 70, 95, 78]
-    }
-    return pd.DataFrame(data)
+def local_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 # Function to map cluster numbers to meaningful names
 def map_cluster_labels(cluster_number):
@@ -47,45 +42,75 @@ def perform_clustering(df):
     df['Cluster'] = df['Cluster'].apply(map_cluster_labels)  # Map clusters to meaningful labels
     return df
 
-# Streamlit App Layout
-st.title("Student Clustering App")
-st.write("This app allows you to cluster students based on their performance metrics and identify at-risk students.")
+if __name__ == '__main__':
 
-# File uploader for user's dataset
-uploaded_file = st.file_uploader("Upload your CSV dataset", type="csv")
+    local_css("styles.css")
 
-if st.button("Try Random Dataset"):
-    uploaded_file = 'student_data.csv'
+    # Load the pre-trained clustering model
+    with open('student_clustering_model.pkl', 'rb') as file:
+        kmeans_model = pickle.load(file)
 
-if uploaded_file is not None:
-    # If the user uploads a dataset
-    user_data = pd.read_csv(uploaded_file)
-    st.write("Uploaded Dataset:")
-    st.dataframe(user_data)
+    # Session state to store the uploaded file or random dataset
+    if 'file_data' not in st.session_state:
+        st.session_state.file_data = None
 
-    # Perform clustering on the uploaded dataset
-    clustered_data = perform_clustering(user_data)
-else:
-    st.write("Or use the sample dataset.")
-    # Generate random dataset
-    random_data = generate_random_dataset()
-    st.write("Sample Dataset:")
-    st.dataframe(random_data)
+    st.title("Identifying At-Risk Students Using Clustering Techniques")
+    st.write("Using clustering algorithm k-means to group students based on their performance metrics. The goal is to identify at-risk students early on by categorizing them into groups like 'high-performing,' 'average,' and 'at-risk,' enabling educators to intervene appropriately.")
+    
+    # Streamlit App Layout
+    with st.sidebar:
+        uploaded_file = st.file_uploader("Upload your CSV dataset", type="csv")
 
-    # Perform clustering on the sample dataset
-    clustered_data = perform_clustering(random_data)
+        # Button to use random dataset
+        if st.button("Try Random Dataset",use_container_width=True):
+            uploaded_file = 'student_data.csv'
+            st.session_state.file_data = pd.read_csv(uploaded_file)  # Load the random dataset
 
-# Visualize clusters
-st.write("Clustered Data:")
-st.dataframe(clustered_data)
+        # Store the uploaded file in session state
+        if uploaded_file is not None:
+            st.session_state.file_data = pd.read_csv(uploaded_file)
 
-# Filter by cluster
-cluster_option = st.selectbox("Select Cluster to Filter", clustered_data['Cluster'].unique())
-filtered_data = clustered_data[clustered_data['Cluster'] == cluster_option]
+        # Sidebar for cluster visualization
+        st.sidebar.markdown("""
+    <div class='cluster'>Cluster Visualization Settings</div>
+    """, unsafe_allow_html=True)
+        col1,col2 = st.columns(2)
+        x_axis_feature = col1.selectbox("Select X-Axis Feature", options=['AttendanceRate (%)', 'StudyHoursPerWeek', 'PreviousGrade', 'FinalGrade', 'HomeworkCompletion (%)'])
+        y_axis_feature = col2.selectbox("Select Y-Axis Feature", options=['AttendanceRate (%)', 'StudyHoursPerWeek', 'PreviousGrade', 'FinalGrade', 'HomeworkCompletion (%)'])
+        
+    # Use the data stored in session state
+    if st.session_state.file_data is not None:
+        user_data = st.session_state.file_data
+        st.write("""<div class='cluster'>Dataset Preview</div>""", unsafe_allow_html=True)
+        st.dataframe(user_data)
 
-st.write(f"Details of Students in Cluster: {cluster_option}")
-st.dataframe(filtered_data)
+        # Perform clustering on the dataset
+        clustered_data = perform_clustering(user_data)
 
-# Plot the clusters using Plotly
-st.write("Cluster Visualization:")
-fig = px.scatter()
+        # Visualize clusters
+        st.write("""<div class='cluster'>Clustered Data</div>""", unsafe_allow_html=True)
+        st.dataframe(clustered_data)
+
+        # Plot the clusters using Plotly
+        st.write("""<div class='cluster'>Cluster Visualization</div>""", unsafe_allow_html=True)
+        fig = px.scatter(
+            clustered_data, 
+            x=x_axis_feature,  # Dynamically chosen feature for x-axis
+            y=y_axis_feature,  # Dynamically chosen feature for y-axis
+            color='Cluster',
+            hover_data=['Name'],
+            title=f"Cluster Visualization Based on {x_axis_feature} and {y_axis_feature}"
+        )
+        st.plotly_chart(fig)
+        
+        # Filter by cluster
+        cluster_option = st.selectbox("Select Cluster to Filter", clustered_data['Cluster'].unique())
+        filtered_data = clustered_data[clustered_data['Cluster'] == cluster_option]
+        st.write(f"""<div class='cluster'>Details of Students in Cluster: {cluster_option}</div>""", unsafe_allow_html=True)
+        st.dataframe(filtered_data)
+
+    else:
+        st.divider()
+        st.write("""<div class='notFound'>Please Upload Dataset or try the Random Dataset </div>""", unsafe_allow_html=True)
+
+    footer()
