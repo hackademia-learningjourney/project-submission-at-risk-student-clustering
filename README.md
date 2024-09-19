@@ -1,14 +1,15 @@
 # Identifying At-Risk Students Using Clustering Techniques
 
 ## Group Name
-[Your Group Name]
+At-Risk Student CLustering
 
 ## Project Title
 Identifying At-Risk Students Using Clustering Techniques
 
 ## Group Members
 - Jayadev Tripathi
-- [Other Group Member Names]
+- Arbin Shrestha
+- Ujwal Raj Bhattarai
 
 ## Project Description
 
@@ -27,17 +28,28 @@ This project explores how clustering algorithms, specifically k-means, can be us
 ## Installation Instructions
 
 1. **Create Virtual Environment**
+```
+  python -m venv 'env'
+  ```
 
 2. **Activate Virtual Environment**
-- On Windows:
   ```
   venv\Scripts\activate
   ```
-- On macOS/Linux:
-  ```
-  source venv/bin/activate
-  ```
 
 3. **Install Dependencies**
+  ```
+  pip install -r requirements.txt
+  ```
 
 After setting up the environment and installing the dependencies, you can run the project as described in the project documentation.
+
+## Running the Project
+To run the project, you can use the following command:
+
+```
+streamlit run interface.py
+```
+## Screenshot:
+![Screenshot Interface](image.png)
+![Screenshot Clustering](image-1.png)
