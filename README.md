@@ -53,3 +53,4 @@ streamlit run interface.py
 ## Screenshot:
 ![Screenshot Interface](image.png)
 ![Screenshot Clustering](image-1.png)
+![Screenshot Filtering](image-2.png)
